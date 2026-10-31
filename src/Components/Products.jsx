@@ -18,7 +18,7 @@ function Products() {
     <>
       <h1 className="text-center text-warning bg-dark p-2">Product Details</h1>
       <div className="container">
-        <div className="bt-group p-2">
+        <div className="btn-group mb-4">
           <button
             className="btn btn-success"
             onClick={() => {
@@ -82,59 +82,59 @@ function Products() {
         </div>
       </div>
       <div className="row">
-        {setAllProducts === true
+        {showAllProducts === true
           ? AllProducts.map((val) => {
               return (
-                <ProductCard>
-                  id= {val.id}
-                  category = {val.category}
-                  name = {val.name}
-                  price = {val.price}
-                </ProductCard>
+                <ProductCard
+                  id={val.id}
+                  category={val.category}
+                  name={val.name}
+                  price={val.price}
+                ></ProductCard>
               );
             })
-          : setHairProducts === true
+          : showHairProducts === true
             ? HairProducts.map((val) => {
                 return (
-                  <ProductCard>
-                    id= {val.id}
-                    category = {val.category}
-                    name = {val.name}
-                    price = {val.price}
-                  </ProductCard>
+                  <ProductCard
+                    id={val.id}
+                    category={val.category}
+                    name={val.name}
+                    price={val.price}
+                  ></ProductCard>
                 );
               })
-            : setFaceProducts === true
+            : showFaceProducts === true
               ? FaceProducts.map((val) => {
                   return (
-                    <ProductCard>
-                      id= {val.id}
-                      category = {val.category}
-                      name = {val.name}
-                      price = {val.price}
-                    </ProductCard>
+                    <ProductCard
+                      id={val.id}
+                      category={val.category}
+                      name={val.name}
+                      price={val.price}
+                    ></ProductCard>
                   );
                 })
-              : setBodyProducts === true
+              : showBodyProducts === true
                 ? BodyProducts.map((val) => {
                     return (
-                      <ProductCard>
-                        id= {val.id}
-                        category = {val.category}
-                        name = {val.name}
-                        price = {val.price}
-                      </ProductCard>
+                      <ProductCard
+                        id={val.id}
+                        category={val.category}
+                        name={val.name}
+                        price={val.price}
+                      ></ProductCard>
                     );
                   })
-                : setBeautyProducts === true
+                : showBeautyProducts === true
                   ? BeautyProducts.map((val) => {
                       return (
-                        <ProductCard>
-                          id= {val.id}
-                          category = {val.category}
-                          name = {val.name}
-                          price = {val.price}
-                        </ProductCard>
+                        <ProductCard
+                          id={val.id}
+                          category={val.category}
+                          name={val.name}
+                          price={val.price}
+                        ></ProductCard>
                       );
                     })
                   : null}
