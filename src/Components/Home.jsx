@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 
 function Home() {
   return (
@@ -20,7 +21,9 @@ function Home() {
                   you feel confident and beautiful.
                 </p>
 
-                <button className="btn btn-danger btn-lg mt-3">Shop Now</button>
+                <NavLink to="/products" className="btn btn-danger mt-3 px-4">
+                  Shop Now
+                </NavLink>
               </div>
 
               {/* Right Banner */}
